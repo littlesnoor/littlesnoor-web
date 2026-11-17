@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>littles noor · Jurnal & aplikasi untuk tumbuh pelan-pelan</title>
+<meta name="description" content="Planner, workbook dan jurnal digital dari littles noor. Satu kali beli dapat PDF siap cetak dan aplikasi di HP & laptop. Mulai Rp25.000.">
+<meta property="og:title" content="littles noor · Tumbuh pelan, bersinar perlahan">
+<meta property="og:description" content="Planner, workbook & jurnal digital: PDF siap cetak + aplikasi di HP. Mulai Rp25.000.">
+<meta property="og:image" content="https://littlesnoor.com/img/og.png">
+<meta property="og:url" content="https://littlesnoor.com/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#A5583A">
+<link rel="icon" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --terra:#A5583A; --terra-dark:#8A4529; --cream:#FBF6EF; --peach:#F6E3D8; --ink:#3B2F2B; --muted:#6F5F58; --gold:#E2B23C;
+  --teal:#22687A; --rose:#A55C6C; --plum:#5A3D66; --sage:#3E6E55;
+  --radius:24px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:Poppins,system-ui,sans-serif;color:var(--ink);background-color:var(--cream);
+  background-image:linear-gradient(rgba(165,88,58,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(165,88,58,.05) 1px,transparent 1px);
+  background-size:32px 32px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;text-decoration:none;border-radius:999px;padding:14px 26px;font-size:16px;transition:transform .15s,box-shadow .15s,background .15s;border:2px solid transparent;cursor:pointer}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(90,45,25,.18)}
+.btn-primary{background:var(--terra);color:#fff}
+.btn-primary:hover{background:var(--terra-dark)}
+.btn-ghost{background:#fff;color:var(--terra);border-color:#E7C1AE}
+.pill{display:inline-block;font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px}
+h1,h2,h3{line-height:1.15;letter-spacing:-.5px}
+h2{font-size:clamp(28px,4.2vw,42px);color:var(--terra)}
+.lead{font-size:clamp(16px,2vw,18px);color:var(--muted)}
+section{padding:72px 0}
+@media (max-width:620px){section{padding:52px 0}.hero{padding-top:28px}}
+.center{text-align:center}
+.eyebrow{display:inline-block;background:#fff;color:var(--terra);border:1.5px solid #EBC9B8;font-weight:600;font-size:13px;padding:6px 14px;border-radius:999px;margin-bottom:14px;transform:rotate(-2deg)}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(251,246,239,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(165,88,58,.10)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{height:38px;width:auto}
+.brand span{font-weight:700;font-size:21px;color:var(--terra);letter-spacing:-.3px}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{text-decoration:none;font-size:15px;font-weight:500;color:var(--ink)}
+.nav-links a:hover{color:var(--terra)}
+.nav .btn{padding:10px 20px;font-size:14px}
+@media (max-width:860px){.nav-links a:not(.btn){display:none}}
+.mnav{display:none}
+@media (max-width:860px){
+  .mnav{display:flex;gap:8px;overflow-x:auto;padding:0 16px 10px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .mnav::-webkit-scrollbar{display:none}
+  .mnav a{flex:0 0 auto;text-decoration:none;font-size:13px;font-weight:600;color:var(--terra);background:#fff;border:1.5px solid #EBC9B8;padding:6px 14px;border-radius:999px}
+  html{scroll-padding-top:120px}
+}
+
+/* hero */
+.hero{padding:56px 0 40px}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:30px;align-items:center}
+.hero h1{font-size:clamp(40px,6.4vw,72px);color:var(--terra);font-weight:700}
+.hero h1 em{font-style:normal;color:var(--ink)}
+.hero p.lead{margin:18px 0 26px;max-width:520px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero .voice{background:#fff;border:1.5px dashed #E7C1AE;border-radius:16px;padding:10px 16px;font-size:15px;margin:-8px 0 24px;max-width:520px}
+.hero .note{margin-top:18px;font-size:14px;color:var(--muted)}
+.fan{position:relative;height:500px}
+.fan .blob{position:absolute;inset:30px 0 0 30px;border-radius:50%;background:var(--peach)}
+.fan img{position:absolute;width:44%;border-radius:16px;border:5px solid #fff;box-shadow:0 18px 40px rgba(60,35,25,.22)}
+.fan .c1{left:2%;top:90px;transform:rotate(-12deg);z-index:5}
+.fan .c2{left:17%;top:40px;transform:rotate(-5deg);z-index:4}
+.fan .c3{left:32%;top:22px;transform:rotate(1deg);z-index:3}
+.fan .c4{left:46%;top:40px;transform:rotate(7deg);z-index:2}
+.fan .c5{left:56%;top:84px;transform:rotate(13deg);z-index:1}
+.fan .tag{position:absolute;right:2%;bottom:40px;z-index:9;background:var(--gold);font-weight:700;padding:10px 20px;border-radius:999px;transform:rotate(6deg);box-shadow:0 8px 18px rgba(0,0,0,.12)}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.fan{height:360px;order:-1}.fan .tag{bottom:10px}}
+@media (max-width:480px){.fan{height:290px}}
+
+/* values */
+.values{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
+.value{background:#fff;border-radius:20px;padding:20px;box-shadow:0 6px 18px rgba(60,35,25,.06)}
+.value b{display:block;font-size:16px;margin:8px 0 2px}
+.value span{font-size:14px;color:var(--muted)}
+.value .ic{font-size:26px}
+@media (max-width:860px){.values{grid-template-columns:1fr 1fr}}
+
+/* products */
+.products{display:flex;flex-wrap:wrap;justify-content:center;gap:22px;margin-top:40px}
+.products .card{flex:0 1 calc((100% - 44px)/3);min-width:280px}
+@media (max-width:960px){.products .card{flex-basis:calc((100% - 22px)/2)}}
+@media (max-width:620px){.products .card{flex-basis:100%}}
+.card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 24px rgba(60,35,25,.08);display:flex;flex-direction:column}
+.card .cov{background:var(--c);padding:26px 26px 0;display:flex;justify-content:center}
+.card .cov img{width:62%;border-radius:12px 12px 0 0;box-shadow:0 -6px 24px rgba(0,0,0,.18)}
+.card .body{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1}
+.card h3{font-size:23px;color:var(--c)}
+.card .tagline{color:var(--muted);font-size:15px;margin:4px 0 12px}
+.card ul{list-style:none;font-size:15px;margin-bottom:18px;flex:1}
+.card li{padding-left:22px;position:relative;margin:5px 0}
+.card li:before{content:"";position:absolute;left:2px;top:9px;width:10px;height:10px;border-radius:50%;background:var(--c);opacity:.75}
+.card .buy{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px dashed #eadfd8;padding-top:16px}
+.card .price{font-weight:700;font-size:22px}
+.card .price small{display:block;font-size:12px;font-weight:500;color:var(--muted)}
+.card .btn{background:var(--c);color:#fff;padding:12px 20px;font-size:15px}
+.card .badges{display:flex;gap:6px;margin-bottom:10px}
+.card .badges .pill{background:color-mix(in srgb,var(--c) 14%,#fff);color:var(--c)}
+
+/* bundle */
+.bundle{background:var(--terra);color:#fff;border-radius:32px;padding:44px;display:grid;grid-template-columns:1.1fr 1fr;gap:30px;align-items:center;position:relative;overflow:hidden}
+.bundle:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:32px 32px;pointer-events:none}
+.bundle h2{color:#fff}
+.bundle p{opacity:.92;margin:12px 0 20px}
+.bundle .old{text-decoration:line-through;opacity:.7;font-size:18px}
+.bundle .new{font-size:48px;font-weight:700;line-height:1}
+.bundle .save{display:inline-block;background:var(--gold);color:var(--ink);font-weight:700;padding:6px 14px;border-radius:999px;margin-left:10px;transform:rotate(-3deg);font-size:15px;vertical-align:middle}
+.bundle .btn{background:#fff;color:var(--terra);margin-top:22px;position:relative;z-index:2}
+.bundle .minis{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;position:relative;z-index:2}
+.bundle .minis img{border-radius:10px;border:3px solid #fff;box-shadow:0 10px 20px rgba(0,0,0,.2)}
+.bundle .minis img:nth-child(odd){transform:translateY(14px) rotate(-3deg)}
+.bundle .minis img:nth-child(even){transform:rotate(3deg)}
+.bundle ul{list-style:none;font-size:15px;display:grid;grid-template-columns:1fr 1fr;gap:4px 16px}
+.bundle li:before{content:"✓ ";font-weight:700;color:var(--gold)}
+@media (max-width:860px){.bundle{grid-template-columns:1fr;padding:30px 24px}.bundle .new{font-size:40px}.bundle ul{grid-template-columns:1fr}}
+
+/* video */
+.vids{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:36px}
+.v{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 6px 18px rgba(60,35,25,.07)}
+.v video{display:block;width:100%;aspect-ratio:9/16;background:#2a2428;object-fit:cover}
+.v.ig{text-decoration:none;display:block}
+.v .poster{position:relative;aspect-ratio:9/16;background:#2a2428;overflow:hidden}
+.v .poster img{width:100%;height:100%;object-fit:cover}
+.v .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.92);color:var(--c);display:grid;place-items:center;font-size:22px;padding-left:4px;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.v .igtag{position:absolute;left:10px;right:10px;bottom:12px;text-align:center;background:rgba(0,0,0,.55);color:#fff;font-size:12px;font-weight:600;padding:7px;border-radius:999px}
+.v .cap{padding:12px 14px;font-weight:600;font-size:15px;color:var(--c)}
+.v .cap span{display:block;font-weight:400;color:var(--muted);font-size:13px}
+@media (max-width:980px){.vids{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;margin-left:-22px;margin-right:-22px;padding-left:22px;padding-right:22px}.vids .v{flex:0 0 58%;scroll-snap-align:center}}
+@media (max-width:480px){.vids .v{flex-basis:72%}}
+.swipe{display:none;text-align:center;font-size:13px;color:var(--muted);margin-top:6px}
+@media (max-width:980px){.swipe{display:block}}
+.cert{display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:center;background:#FBEDEF;border-radius:32px;padding:40px;margin-top:40px}
+.cert img{width:100%;border-radius:20px;box-shadow:0 20px 40px rgba(122,52,70,.25);transform:rotate(-3deg)}
+.cert h3{font-size:clamp(24px,3vw,34px);margin:12px 0 10px;color:var(--rose)}
+.cert p{color:#6d555c}
+.cert small{display:block;margin-top:10px;color:#9a858b}
+@media (max-width:760px){.cert{grid-template-columns:1fr;padding:28px;gap:26px}.cert img{max-width:200px;margin:0 auto}}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px;counter-reset:s}
+.step{background:#fff;border-radius:20px;padding:24px;position:relative;box-shadow:0 6px 18px rgba(60,35,25,.06)}
+.step:before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--peach);color:var(--terra);font-weight:700;margin-bottom:12px}
+.step b{display:block;font-size:17px}
+.step span{font-size:14px;color:var(--muted)}
+.privacy{margin-top:20px;background:#fff;border-radius:20px;padding:18px 22px;display:flex;gap:14px;align-items:center;font-size:15px;box-shadow:0 6px 18px rgba(60,35,25,.06)}
+@media (max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.steps{grid-template-columns:1fr}}
+
+/* story */
+.story{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center}
+.story .mark{background:#fff;border-radius:32px;padding:50px;box-shadow:0 8px 24px rgba(60,35,25,.07)}
+.story p{margin:14px 0;font-size:17px}
+.story .sign{font-weight:600;color:var(--terra)}
+@media (max-width:860px){.story{grid-template-columns:1fr}.story .mark{max-width:220px;padding:30px;margin:0 auto}}
+
+/* faq */
+.faq{max-width:780px;margin:30px auto 0}
+details{background:#fff;border-radius:18px;margin-bottom:12px;box-shadow:0 4px 14px rgba(60,35,25,.05)}
+summary{list-style:none;cursor:pointer;padding:18px 22px;font-weight:600;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";font-size:22px;color:var(--terra);line-height:1}
+details[open] summary:after{content:"–"}
+details p{padding:0 22px 18px;color:var(--muted)}
+
+/* footer */
+footer{padding:50px 0 40px;border-top:1px solid rgba(165,88,58,.12);margin-top:30px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:flex-start}
+.foot p{color:var(--muted);font-size:14px;max-width:340px;margin-top:8px}
+.foot-links{display:flex;flex-wrap:wrap;gap:12px}
+.foot-links a{text-decoration:none;background:#fff;border:1.5px solid #EBC9B8;padding:9px 16px;border-radius:999px;font-size:14px;font-weight:500}
+.copy{text-align:center;color:var(--muted);font-size:13px;margin-top:30px}
+
+/* sticky mobile cta */
+.mcta{display:none}
+@media (max-width:760px){
+  .mcta{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;background:var(--terra);color:#fff;border-radius:999px;padding:12px 14px 12px 22px;align-items:center;justify-content:space-between;text-decoration:none;box-shadow:0 12px 26px rgba(90,45,25,.3);font-size:14px}
+  .mcta b{background:#fff;color:var(--terra);padding:8px 14px;border-radius:999px;font-size:13px}
+  body{padding-bottom:76px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top"><img src="img/mark.png" alt=""><span>littles noor</span></a>
+    <nav class="nav-links">
+      <a href="#produk">Produk</a>
+      <a href="#paket">Paket Hemat</a>
+      <a href="#video">Video</a>
+      <a href="#aplikasi">Aplikasi</a>
+      <a href="#cerita">Cerita</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-primary" href="https://lynk.id/littlesnoor" target="_blank" rel="noopener">Belanja</a>
+    </nav>
+  </div>
+  <nav class="mnav" aria-label="Menu">
+    <a href="#produk">Produk</a><a href="#paket">Paket Hemat</a><a href="#video">Video</a><a href="#aplikasi">Aplikasi</a><a href="#cerita">Cerita</a><a href="#faq">FAQ</a>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">PDF siap cetak + aplikasi di HP</span>
+      <h1>Tumbuh pelan,<br><em>bersinar perlahan.</em></h1>
+      <p class="lead">Planner, catatan keuangan dan workbook untuk muslimah yang ingin hidup tanpa terburu-buru. Sekali beli, kamu dapat PDF yang bisa dicetak sekaligus aplikasinya, yang bisa dipakai di HP maupun laptop.</p>
+      <p class="voice">🎙️ <b>Malas mengetik?</b> Semua halaman isian di aplikasinya bisa diisi pakai suara.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#produk">Lihat produk</a>
+        <a class="btn btn-ghost" href="#paket">Paket 5 produk · Rp99rb</a>
+      </div>
+      <p class="note">Mulai Rp25.000 · bayar aman lewat Lynk.id · QRIS, e-wallet & transfer bank</p>
+    </div>
+    <div class="fan" aria-hidden="true">
+      <div class="blob"></div>
+      <img class="c5" src="img/catat-usaha-id.jpg" alt="">
+      <img class="c4" src="img/cukup-id.jpg" alt="">
+      <img class="c3" src="img/catatan-majelis-id.jpg" alt="">
+      <img class="c2" src="img/mulai-lagi-id.jpg" alt="">
+      <img class="c1" src="img/planner-2027-id.jpg" alt="">
+      <div class="tag">5 produk · 5 aplikasi</div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="values">
+      <div class="value"><div class="ic">🖨️</div><b>PDF siap cetak</b><span>Tulis tangan di kertas, atau isi di tablet.</span></div>
+      <div class="value"><div class="ic">📱</div><b>Aplikasi di HP & laptop</b><span>Bisa dipasang di layar utama, seperti aplikasi biasa.</span></div>
+      <div class="value"><div class="ic">🔒</div><b>Catatanmu milikmu</b><span>Isinya tersimpan di perangkatmu sendiri.</span></div>
+      <div class="value"><div class="ic">💛</div><b>Sekali bayar</b><span>Tanpa langganan, update fitur baru gratis.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="produk">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Produk littles noor</span>
+      <h2>Pilih yang kamu butuhkan sekarang</h2>
+      <p class="lead">Setiap produk berisi PDF + akses aplikasi di app.littlesnoor.com</p>
+    </div>
+    <div class="products">
+
+      <article class="card" style="--c:var(--teal)">
+        <div class="cov"><img src="img/planner-2027-id.jpg" alt="Sampul Planner Muslimah 2027" loading="lazy"></div>
+        <div class="body">
+          <div class="badges"><span class="pill">PDF</span><span class="pill">Aplikasi</span></div>
+          <h3>Planner Muslimah 2027</h3>
+          <p class="tagline">Satu tahun yang ditata dengan tenang</p>
+          <ul><li>Jurnal harian & ibadah</li><li>Kalender Hijriah</li><li>Habit tracker & target tahunan</li><li>Persiapan Ramadhan 1448 H</li></ul>
+          <div class="buy"><div class="price">Rp29.000<small>PDF + aplikasi</small></div><a class="btn" href="https://lynk.id/littlesnoor/2q0v7823ed4w" target="_blank" rel="noopener">Beli</a></div>
+        </div>
+      </article>
+
+      <article class="card" style="--c:var(--rose)">
+        <div class="cov"><img src="img/mulai-lagi-id.jpg" alt="Sampul workbook Mulai Lagi" loading="lazy"></div>
+        <div class="body">
+          <div class="badges"><span class="pill">PDF</span><span class="pill">Aplikasi</span></div>
+          <h3>Mulai Lagi</h3>
+          <p class="tagline">Workbook 30 hari untuk bangkit, pelan-pelan</p>
+          <ul><li>30 halaman refleksi harian</li><li>Pencatat mood & progres</li><li>Pengingat harian</li><li><a href="#sertifikat" style="color:var(--c);font-weight:600">🏅 Sertifikat saat selesai</a></li></ul>
+          <div class="buy"><div class="price">Rp29.000<small>PDF + aplikasi</small></div><a class="btn" href="https://lynk.id/littlesnoor/7n27pp8ex5r9" target="_blank" rel="noopener">Beli</a></div>
+        </div>
+      </article>
+
+      <article class="card" style="--c:var(--plum)">
+        <div class="cov"><img src="img/catatan-majelis-id.jpg" alt="Sampul jurnal Catatan Majelis" loading="lazy"></div>
+        <div class="body">
+          <div class="badges"><span class="pill">PDF</span><span class="pill">Aplikasi</span></div>
+          <h3>Catatan Majelis</h3>
+          <p class="tagline">Ikat ilmumu dengan tulisan</p>
+          <ul><li>Catatan kajian, halaqah & rapat</li><li>Mutaba'ah harian</li><li>Hafalan, bacaan & doa</li><li>Bisa dicetak</li></ul>
+          <div class="buy"><div class="price">Rp29.000<small>PDF + aplikasi</small></div><a class="btn" href="https://lynk.id/littlesnoor/0o5ky1d05nd0" target="_blank" rel="noopener">Beli</a></div>
+        </div>
+      </article>
+
+      <article class="card" style="--c:var(--sage)">
+        <div class="cov"><img src="img/cukup-id.jpg" alt="Sampul jurnal keuangan Cukup" loading="lazy"></div>
+        <div class="body">
+          <div class="badges"><span class="pill">PDF</span><span class="pill">Aplikasi</span><span class="pill">+ Bonus Saku</span></div>
+          <h3>Cukup</h3>
+          <p class="tagline">Tahu ke mana uang pergi, supaya hati terasa cukup</p>
+          <ul><li>Catat pemasukan & pengeluaran</li><li>Grafik ke mana uangmu pergi</li><li>Anggaran, tabungan & tagihan</li><li>Bonus Saku: 30 kartu penguat</li></ul>
+          <div class="buy"><div class="price">Rp25.000<small>PDF + aplikasi</small></div><a class="btn" href="https://lynk.id/littlesnoor/39q7xyvx2ky6" target="_blank" rel="noopener">Beli</a></div>
+        </div>
+      </article>
+
+      <article class="card" style="--c:var(--terra)">
+        <div class="cov"><img src="img/catat-usaha-id.jpg" alt="Sampul Catat Usaha" loading="lazy"></div>
+        <div class="body">
+          <div class="badges"><span class="pill">PDF</span><span class="pill">Aplikasi</span><span class="pill">Baru</span></div>
+          <h3>Catat Usaha</h3>
+          <p class="tagline">Buku keuangan UMKM: nota, stok & laba</p>
+          <ul><li>Scan barcode produk</li><li>Nota berlogo + kirim lewat WA</li><li>Produk, stok & pelanggan</li><li>Laporan omzet & laba</li></ul>
+          <div class="buy"><div class="price">Rp29.000<small>PDF + aplikasi</small></div><a class="btn" href="https://lynk.id/littlesnoor/rnrwkmq2w2qy" target="_blank" rel="noopener">Beli</a></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- BUNDLE -->
+<section id="paket">
+  <div class="wrap">
+    <div class="bundle">
+      <div style="position:relative;z-index:2">
+        <h2>Paket Bundling<br>semua 5 produk</h2>
+        <p>Ambil semuanya sekaligus. Satu kali beli, kelima aplikasi langsung terbuka untuk emailmu.</p>
+        <ul><li>Planner Muslimah 2027</li><li>Mulai Lagi</li><li>Catatan Majelis</li><li>Cukup + bonus Saku</li><li>Catat Usaha</li><li>5 PDF + 5 aplikasi</li></ul>
+        <div style="margin-top:22px"><div class="old">Normal Rp141.000</div><span class="new">Rp99.000</span><span class="save">Hemat Rp42rb</span></div>
+        <a class="btn" href="https://lynk.id/littlesnoor/68wd1jgl36n3" target="_blank" rel="noopener">Ambil paketnya</a>
+      </div>
+      <div class="minis" aria-hidden="true">
+        <img src="img/planner-2027-id.jpg" alt=""><img src="img/mulai-lagi-id.jpg" alt=""><img src="img/catatan-majelis-id.jpg" alt=""><img src="img/cukup-id.jpg" alt=""><img src="img/catat-usaha-id.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section id="video">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Video cara pakai</span>
+      <h2>Lihat cara pakainya</h2>
+      <p class="lead">Ketuk untuk memutar video. Begini rasanya memakai aplikasinya.</p>
+    </div>
+    <div class="vids">
+      <div class="v" style="--c:var(--terra)"><video src="vid/catat-usaha.mp4" poster="vid/catat-usaha.jpg" controls playsinline preload="none"></video><div class="cap">Catat Usaha<span>Tutorial lengkap · 1:51</span></div></div>
+      <div class="v" style="--c:var(--sage)"><video src="vid/cukup.mp4" poster="vid/cukup.jpg" controls playsinline preload="none"></video><div class="cap">Cukup<span>Rilis + cara pakai · 1:04</span></div></div>
+      <div class="v" style="--c:var(--rose)"><video src="vid/mulai-lagi.mp4" poster="vid/mulai-lagi.jpg" controls playsinline preload="none"></video><div class="cap">Mulai Lagi<span>Kenalan dengan Mulai Lagi · 0:41</span></div></div>
+      <div class="v" style="--c:var(--teal)"><video src="vid/planner.mp4" poster="vid/planner.jpg" controls playsinline preload="none"></video><div class="cap">Planner 2027<span>Intip isinya · 0:35</span></div></div>
+      <div class="v" style="--c:var(--plum)"><video src="vid/catatan-majelis.mp4" poster="vid/catatan-majelis.jpg" controls playsinline preload="none"></video><div class="cap">Catatan Majelis<span>Pulang kajian · 0:48</span></div></div>
+    </div>
+    <p class="swipe">Geser untuk melihat video lainnya →</p>
+    <div class="cert" id="sertifikat">
+      <img src="img/sertifikat-mulai-lagi.jpg" alt="Contoh sertifikat Mulai Lagi" loading="lazy">
+      <div>
+        <span class="eyebrow">🏅 Bonus Mulai Lagi</span>
+        <h3>Selesai 30 hari, dapat sertifikat.</h3>
+        <p>Saat kamu menyelesaikan hari ke-30, aplikasi membuatkan sertifikat berisi namamu, jumlah langkah kecil, dan banyaknya kata yang sudah kamu tulis. Simpan, atau bagikan ke IG Story sebagai pengingat bahwa kamu sudah sejauh ini.</p>
+        <small>*Contoh tampilan. Isinya mengikuti perjalananmu sendiri.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW THE APP WORKS -->
+<section id="aplikasi">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Cara pakai aplikasinya</span>
+      <h2>Beli sekali, langsung bisa dipakai</h2>
+      <p class="lead">Semua produkmu tersimpan rapi di satu rak, di app.littlesnoor.com</p>
+    </div>
+    <div class="steps">
+      <div class="step"><b>Beli di Lynk.id</b><span>Pilih produk, bayar pakai QRIS, e-wallet atau transfer.</span></div>
+      <div class="step"><b>Buka app.littlesnoor.com</b><span>Pakai Safari di iPhone atau Chrome di Android.</span></div>
+      <div class="step"><b>Masuk dengan emailmu</b><span>Gunakan email yang sama dengan saat checkout.</span></div>
+      <div class="step"><b>Pasang di layar utama</b><span>Buka produkmu dari rak, lalu mulai menulis atau bicara.</span></div>
+    </div>
+    <div class="privacy"><span style="font-size:26px">🤍</span><span>Isi jurnalmu tersimpan di perangkatmu sendiri, bukan di server kami. Satu email bisa dipakai di 2 perangkat.</span></div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="cerita">
+  <div class="wrap story">
+    <div class="mark"><img src="img/mark.png" alt="Logo littles noor"></div>
+    <div>
+      <span class="eyebrow">Cerita di balik littles noor</span>
+      <h2>Berawal dari kepala yang sering penuh</h2>
+      <p>Sebagai anak pertama yang merantau jauh dari rumah, pikiranku sering penuh. Ada banyak hal yang ingin dipikirkan, dirasakan dan dirapikan, tapi jarang punya tempat untuk menuangkannya.</p>
+      <p>Workbook pertama littles noor sebenarnya kubuat untuk diriku sendiri. Lama-lama aku sadar, banyak perempuan lain juga butuh tempat yang layak untuk menumpahkan isi hati, menata hari, dan tumbuh pelan-pelan.</p>
+      <p>Dari situ littles noor lahir: “noor” kecil-kecil yang menemani langkahmu, satu halaman demi satu halaman.</p>
+      <p class="sign">Tumbuh pelan, bersinar perlahan 🤍</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Pertanyaan yang sering ditanyakan</span>
+      <h2>FAQ</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Apa yang aku dapat setelah membeli?</summary><p>File PDF yang bisa dicetak atau diisi di tablet, ditambah akses aplikasi di app.littlesnoor.com. Petunjuk aksesnya ada di halaman pertama PDF.</p></details>
+      <details><summary>Bagaimana cara membayarnya?</summary><p>Pembayaran lewat Lynk.id. Kamu bisa membayar dengan QRIS, e-wallet, atau transfer bank. File langsung dikirim setelah pembayaran berhasil.</p></details>
+      <details><summary>Aplikasinya harus diunduh dari Play Store/App Store?</summary><p>Tidak perlu. Cukup buka app.littlesnoor.com di browser HP, lalu tambahkan ke layar utama. Tampilannya akan seperti aplikasi biasa.</p></details>
+      <details><summary>Kapan aksesnya aktif setelah membeli?</summary><p>Biasanya langsung aktif begitu pembayaran berhasil, paling lambat 1×24 jam. Masuk pakai email yang sama dengan saat checkout di Lynk.id.</p></details>
+      <details><summary>Apakah ada biaya bulanan?</summary><p>Tidak ada. Cukup sekali bayar, tanpa langganan.</p></details>
+      <details><summary>Bisa dipakai di berapa perangkat?</summary><p>Satu email bisa dipakai di 2 perangkat, misalnya HP dan laptop.</p></details>
+      <details><summary>Apakah catatanku aman?</summary><p>Isi jurnalmu tersimpan di perangkatmu sendiri, bukan di server kami, jadi hanya kamu yang bisa membacanya.</p></details>
+      <details><summary>Aku sudah membeli, tapi tidak bisa masuk ke aplikasi.</summary><p>Pastikan email yang kamu pakai sama dengan email saat checkout di Lynk.id. Kalau masih belum bisa, DM Instagram @littlesnoor atau email littlesnoor@gmail.com.</p></details>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="#top"><img src="img/mark.png" alt=""><span>littles noor</span></a>
+        <p>Planner, workbook & jurnal untuk tumbuh pelan-pelan. Dibuat dengan sepenuh hati, untuk kamu yang sedang belajar menata diri.</p>
+      </div>
+      <div class="foot-links">
+        <a href="https://lynk.id/littlesnoor" target="_blank" rel="noopener">🛍️ Lynk.id</a>
+        <a href="https://app.littlesnoor.com" target="_blank" rel="noopener">📱 Aplikasi</a>
+        <a href="https://app.littlesnoor.com/saku/" target="_blank" rel="noopener">✨ Saku gratis</a>
+        <a href="https://instagram.com/littlesnoor" target="_blank" rel="noopener">📷 @littlesnoor</a>
+        <a href="mailto:littlesnoor@gmail.com">✉️ Email</a>
+      </div>
+    </div>
+    <p class="copy">© 2026 littles noor · Tumbuh pelan, bersinar perlahan</p>
+  </div>
+</footer>
+
+<a class="mcta" href="https://lynk.id/littlesnoor/68wd1jgl36n3" target="_blank" rel="noopener">Paket 5 produk, hemat Rp42rb <b>Rp99rb</b></a>
+
+</body>
+</html>
