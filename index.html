@@ -443,5 +443,25 @@ footer{padding:50px 0 40px;border-top:1px solid rgba(165,88,58,.12);margin-top:3
 
 <a class="mcta" href="https://lynk.id/littlesnoor/68wd1jgl36n3" target="_blank" rel="noopener">Paket 5 produk, hemat Rp42rb <b>Rp99rb</b></a>
 
+<script>
+/* Affiliate: littlesnoor.com/?ref=nama -> tombol Beli memakai link affiliate Lynk orang itu */
+(function(){
+  var AFF={
+    nuraini:"https://lynk.id/a/1029826339",
+    raadiah:"https://lynk.id/a/3581187669",
+    ar:"https://lynk.id/a/3581187669"
+  };
+  var KEY="ln_ref", DAYS=30, ref=null;
+  try{
+    var q=(new URLSearchParams(location.search).get("ref")||"").toLowerCase();
+    if(AFF[q]){localStorage.setItem(KEY,JSON.stringify({r:q,t:Date.now()}));}
+    var o=JSON.parse(localStorage.getItem(KEY)||"null");
+    if(o&&AFF[o.r]&&Date.now()-o.t<DAYS*864e5){ref=o.r;}
+  }catch(e){var q2=(location.search.match(/[?&]ref=([^&]+)/)||[])[1];if(q2&&AFF[q2.toLowerCase()])ref=q2.toLowerCase();}
+  if(!ref)return;
+  var links=document.querySelectorAll('a[href^="https://lynk.id/littlesnoor"]');
+  for(var i=0;i<links.length;i++){links[i].href=AFF[ref];}
+})();
+</script>
 </body>
 </html>
