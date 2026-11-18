@@ -150,6 +150,10 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,246,239,.92);backdro
 .cert h3{font-size:clamp(24px,3vw,34px);margin:12px 0 10px;color:var(--rose)}
 .cert p{color:#6d555c}
 .cert small{display:block;margin-top:10px;color:#9a858b}
+.cert.bonus-plum{background:#F3ECF6}
+.cert.bonus-plum img{transform:rotate(2deg);box-shadow:0 20px 40px rgba(90,61,102,.25)}
+.cert.bonus-plum h3{color:var(--plum)}
+.cert.bonus-plum p{color:#5f5068}
 @media (max-width:760px){.cert{grid-template-columns:1fr;padding:28px;gap:26px}.cert img{max-width:200px;margin:0 auto}}
 
 /* steps */
@@ -286,10 +290,10 @@ footer{padding:50px 0 40px;border-top:1px solid rgba(165,88,58,.12);margin-top:3
       <article class="card" style="--c:var(--plum)">
         <div class="cov"><img src="img/catatan-majelis-id.jpg" alt="Sampul jurnal Catatan Majelis" loading="lazy"></div>
         <div class="body">
-          <div class="badges"><span class="pill">PDF</span><span class="pill">Aplikasi</span></div>
+          <div class="badges"><span class="pill">PDF</span><span class="pill">Aplikasi</span><span class="pill">+ Bonus Cetak</span></div>
           <h3>Catatan Majelis</h3>
           <p class="tagline">Ikat ilmumu dengan tulisan</p>
-          <ul><li>Catatan kajian, halaqah & rapat</li><li>Mutaba'ah harian</li><li>Hafalan, bacaan & doa</li><li>Bisa dicetak</li></ul>
+          <ul><li>Catatan kajian, halaqah & rapat</li><li>Mutaba'ah harian</li><li>Hafalan, bacaan & doa</li><li><a href="#bonus-majelis" style="color:var(--c);font-weight:600">🎁 Bonus: paket siap cetak</a></li></ul>
           <div class="buy"><div class="price">Rp29.000<small>PDF + aplikasi</small></div><a class="btn" href="https://lynk.id/littlesnoor/0o5ky1d05nd0" target="_blank" rel="noopener">Beli</a></div>
         </div>
       </article>
@@ -327,7 +331,7 @@ footer{padding:50px 0 40px;border-top:1px solid rgba(165,88,58,.12);margin-top:3
       <div style="position:relative;z-index:2">
         <h2>Paket Bundling<br>semua 5 produk</h2>
         <p>Ambil semuanya sekaligus. Satu kali beli, kelima aplikasi langsung terbuka untuk emailmu.</p>
-        <ul><li>Planner Muslimah 2027</li><li>Mulai Lagi</li><li>Catatan Majelis</li><li>Cukup + bonus Saku</li><li>Catat Usaha</li><li>5 PDF + 5 aplikasi</li></ul>
+        <ul><li>Planner Muslimah 2027</li><li>Mulai Lagi</li><li>Catatan Majelis + bonus siap cetak</li><li>Cukup + bonus Saku</li><li>Catat Usaha</li><li>5 PDF + 5 aplikasi</li></ul>
         <div style="margin-top:22px"><div class="old">Normal Rp141.000</div><span class="new">Rp99.000</span><span class="save">Hemat Rp42rb</span></div>
         <a class="btn" href="https://lynk.id/littlesnoor/68wd1jgl36n3" target="_blank" rel="noopener">Ambil paketnya</a>
       </div>
@@ -361,6 +365,15 @@ footer{padding:50px 0 40px;border-top:1px solid rgba(165,88,58,.12);margin-top:3
         <h3>Selesai 30 hari, dapat sertifikat.</h3>
         <p>Saat kamu menyelesaikan hari ke-30, aplikasi membuatkan sertifikat berisi namamu, jumlah langkah kecil, dan banyaknya kata yang sudah kamu tulis. Simpan, atau bagikan ke IG Story sebagai pengingat bahwa kamu sudah sejauh ini.</p>
         <small>*Contoh tampilan. Isinya mengikuti perjalananmu sendiri.</small>
+      </div>
+    </div>
+    <div class="cert bonus-plum" id="bonus-majelis">
+      <img src="img/bonus-catatan-majelis.jpg" alt="Contoh halaman bonus Catatan Majelis siap cetak" loading="lazy">
+      <div>
+        <span class="eyebrow">🎁 Bonus Catatan Majelis</span>
+        <h3>Paket siap cetak untuk kajian & rapat.</h3>
+        <p>Selain PDF dan aplikasinya, kamu juga dapat lembar siap cetak ukuran A4: template notulen rapat & musyawarah (agenda, keputusan, pembagian tugas), tracker kajian bulanan, dan halaman refleksi akhir bulan. Cetak sebanyak yang kamu butuhkan.</p>
+        <small>*Dikirim bersama file PDF setelah pembelian.</small>
       </div>
     </div>
   </div>
