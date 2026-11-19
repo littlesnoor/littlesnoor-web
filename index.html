@@ -145,6 +145,17 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,246,239,.92);backdro
 @media (max-width:480px){.vids .v{flex-basis:72%}}
 .swipe{display:none;text-align:center;font-size:13px;color:var(--muted);margin-top:6px}
 @media (max-width:980px){.swipe{display:block}}
+.bonus-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;margin:36px -22px 0;padding:6px 22px 16px;scroll-padding-inline:22px;-webkit-overflow-scrolling:touch}
+.bcard{flex:0 0 300px;scroll-snap-align:start;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 6px 18px rgba(60,35,25,.07);display:flex;flex-direction:column}
+.bvis{background:var(--t);height:225px;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:18px}
+.bvis img{height:100%;width:auto;max-width:100%;object-fit:contain;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.15);transform:rotate(-2deg)}
+.bvis span{font-size:64px;line-height:1}
+.bbody{padding:18px 20px 22px}
+.bpill{display:inline-block;background:var(--t);color:var(--c);font-size:12px;font-weight:600;padding:4px 12px;border-radius:999px}
+.bcard h3{font-size:18px;line-height:1.3;margin:10px 0 8px;color:var(--c)}
+.bcard p{font-size:14px;color:var(--muted)}
+.blink{display:inline-block;margin-top:12px;font-weight:600;color:var(--terra);text-decoration:none}
+@media (max-width:760px){.bcard{flex-basis:80%}}
 .cert{display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:center;background:#FBEDEF;border-radius:32px;padding:40px;margin-top:40px}
 .cert img{width:100%;border-radius:20px;box-shadow:0 20px 40px rgba(122,52,70,.25);transform:rotate(-3deg)}
 .cert h3{font-size:clamp(24px,3vw,34px);margin:12px 0 10px;color:var(--rose)}
@@ -268,10 +279,10 @@ footer{padding:50px 0 40px;border-top:1px solid rgba(165,88,58,.12);margin-top:3
       <article class="card" style="--c:var(--teal)">
         <div class="cov"><img src="img/planner-2027-id.jpg" alt="Sampul Planner Muslimah 2027" loading="lazy"></div>
         <div class="body">
-          <div class="badges"><span class="pill">PDF</span><span class="pill">Aplikasi</span></div>
+          <div class="badges"><span class="pill">PDF</span><span class="pill">Aplikasi</span><span class="pill">+ Bonus</span></div>
           <h3>Planner Muslimah 2027</h3>
           <p class="tagline">Satu tahun yang ditata dengan tenang</p>
-          <ul><li>Jurnal harian & ibadah</li><li>Kalender Hijriah</li><li>Habit tracker & target tahunan</li><li>Persiapan Ramadhan 1448 H</li></ul>
+          <ul><li>Jurnal harian & ibadah</li><li>Kalender Hijriah</li><li>Habit tracker & target tahunan</li><li><a href="#bonus" style="color:var(--c);font-weight:600">🎁 Bonus: checklist Ramadhan</a></li></ul>
           <div class="buy"><div class="price">Rp29.000<small>PDF + aplikasi</small></div><a class="btn" href="https://lynk.id/littlesnoor/2q0v7823ed4w" target="_blank" rel="noopener">Beli</a></div>
         </div>
       </article>
@@ -279,10 +290,10 @@ footer{padding:50px 0 40px;border-top:1px solid rgba(165,88,58,.12);margin-top:3
       <article class="card" style="--c:var(--rose)">
         <div class="cov"><img src="img/mulai-lagi-id.jpg" alt="Sampul workbook Mulai Lagi" loading="lazy"></div>
         <div class="body">
-          <div class="badges"><span class="pill">PDF</span><span class="pill">Aplikasi</span></div>
+          <div class="badges"><span class="pill">PDF</span><span class="pill">Aplikasi</span><span class="pill">+ Bonus</span></div>
           <h3>Mulai Lagi</h3>
           <p class="tagline">Workbook 30 hari untuk bangkit, pelan-pelan</p>
-          <ul><li>30 halaman refleksi harian</li><li>Pencatat mood & progres</li><li>Pengingat harian</li><li><a href="#sertifikat" style="color:var(--c);font-weight:600">🏅 Sertifikat saat selesai</a></li></ul>
+          <ul><li>30 halaman refleksi harian</li><li>Pencatat mood & progres</li><li>Pengingat harian</li><li><a href="#bonus" style="color:var(--c);font-weight:600">🎁 Bonus: sertifikat saat selesai</a></li></ul>
           <div class="buy"><div class="price">Rp29.000<small>PDF + aplikasi</small></div><a class="btn" href="https://lynk.id/littlesnoor/7n27pp8ex5r9" target="_blank" rel="noopener">Beli</a></div>
         </div>
       </article>
@@ -290,10 +301,10 @@ footer{padding:50px 0 40px;border-top:1px solid rgba(165,88,58,.12);margin-top:3
       <article class="card" style="--c:var(--plum)">
         <div class="cov"><img src="img/catatan-majelis-id.jpg" alt="Sampul jurnal Catatan Majelis" loading="lazy"></div>
         <div class="body">
-          <div class="badges"><span class="pill">PDF</span><span class="pill">Aplikasi</span><span class="pill">+ Bonus Cetak</span></div>
+          <div class="badges"><span class="pill">PDF</span><span class="pill">Aplikasi</span><span class="pill">+ Bonus</span></div>
           <h3>Catatan Majelis</h3>
           <p class="tagline">Ikat ilmumu dengan tulisan</p>
-          <ul><li>Catatan kajian, halaqah & rapat</li><li>Mutaba'ah harian</li><li>Hafalan, bacaan & doa</li><li><a href="#bonus-majelis" style="color:var(--c);font-weight:600">🎁 Bonus: paket siap cetak</a></li></ul>
+          <ul><li>Catatan kajian, halaqah & rapat</li><li>Mutaba'ah harian</li><li>Hafalan, bacaan & doa</li><li><a href="#bonus" style="color:var(--c);font-weight:600">🎁 Bonus: paket siap cetak</a></li></ul>
           <div class="buy"><div class="price">Rp29.000<small>PDF + aplikasi</small></div><a class="btn" href="https://lynk.id/littlesnoor/0o5ky1d05nd0" target="_blank" rel="noopener">Beli</a></div>
         </div>
       </article>
@@ -301,10 +312,10 @@ footer{padding:50px 0 40px;border-top:1px solid rgba(165,88,58,.12);margin-top:3
       <article class="card" style="--c:var(--sage)">
         <div class="cov"><img src="img/cukup-id.jpg" alt="Sampul jurnal keuangan Cukup" loading="lazy"></div>
         <div class="body">
-          <div class="badges"><span class="pill">PDF</span><span class="pill">Aplikasi</span><span class="pill">+ Bonus Saku</span></div>
+          <div class="badges"><span class="pill">PDF</span><span class="pill">Aplikasi</span><span class="pill">+ Bonus</span></div>
           <h3>Cukup</h3>
           <p class="tagline">Tahu ke mana uang pergi, supaya hati terasa cukup</p>
-          <ul><li>Catat pemasukan & pengeluaran</li><li>Grafik ke mana uangmu pergi</li><li>Anggaran, tabungan & tagihan</li><li>Bonus Saku: 30 kartu penguat</li></ul>
+          <ul><li>Catat pemasukan & pengeluaran</li><li>Grafik ke mana uangmu pergi</li><li>Anggaran, tabungan & tagihan</li><li><a href="#bonus" style="color:var(--c);font-weight:600">🎁 Bonus: Saku, 30 kartu penguat</a></li></ul>
           <div class="buy"><div class="price">Rp25.000<small>PDF + aplikasi</small></div><a class="btn" href="https://lynk.id/littlesnoor/39q7xyvx2ky6" target="_blank" rel="noopener">Beli</a></div>
         </div>
       </article>
@@ -312,15 +323,85 @@ footer{padding:50px 0 40px;border-top:1px solid rgba(165,88,58,.12);margin-top:3
       <article class="card" style="--c:var(--terra)">
         <div class="cov"><img src="img/catat-usaha-id.jpg" alt="Sampul Catat Usaha" loading="lazy"></div>
         <div class="body">
-          <div class="badges"><span class="pill">PDF</span><span class="pill">Aplikasi</span><span class="pill">Baru</span></div>
+          <div class="badges"><span class="pill">PDF</span><span class="pill">Aplikasi</span><span class="pill">+ Bonus</span></div>
           <h3>Catat Usaha</h3>
           <p class="tagline">Buku keuangan UMKM: nota, stok & laba</p>
-          <ul><li>Scan barcode produk</li><li>Nota berlogo + kirim lewat WA</li><li>Produk, stok & pelanggan</li><li>Laporan omzet & laba</li></ul>
+          <ul><li>Scan barcode produk</li><li>Nota berlogo + kirim lewat WA</li><li>Produk, stok & pelanggan</li><li><a href="#bonus" style="color:var(--c);font-weight:600">🎁 Bonus: nota & hitung HPP</a></li></ul>
           <div class="buy"><div class="price">Rp29.000<small>PDF + aplikasi</small></div><a class="btn" href="https://lynk.id/littlesnoor/rnrwkmq2w2qy" target="_blank" rel="noopener">Beli</a></div>
         </div>
       </article>
 
     </div>
+  </div>
+</section>
+
+<!-- BONUS -->
+<section id="bonus">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Bonus di setiap produk</span>
+      <h2>Beli satu, dapat bonusnya juga</h2>
+      <p class="lead">Setiap produk punya bonusnya sendiri. Geser untuk melihat semuanya.</p>
+    </div>
+    <div class="bonus-track">
+
+      <div class="bcard" style="--c:var(--teal);--t:#E3F0F2">
+        <div class="bvis"><span>🌙</span></div>
+        <div class="bbody">
+          <span class="bpill">Planner Muslimah 2027</span>
+          <h3>Checklist Persiapan Ramadhan 1448 H</h3>
+          <p>Lembar siap cetak untuk menyambut Ramadhan: target ibadah, tracker 30 hari (puasa, tarawih, tilawah, sedekah), rencana menu sahur & berbuka, sampai catatan zakat dan persiapan Lebaran.</p>
+        </div>
+      </div>
+
+      <div class="bcard" id="sertifikat" style="--c:var(--rose);--t:#FBEDEF">
+        <div class="bvis"><img src="img/sertifikat-mulai-lagi.jpg" alt="Contoh sertifikat Mulai Lagi" loading="lazy"></div>
+        <div class="bbody">
+          <span class="bpill">Mulai Lagi</span>
+          <h3>Sertifikat saat selesai 30 hari</h3>
+          <p>Saat menyelesaikan hari ke-30, aplikasi membuatkan sertifikat berisi namamu, jumlah langkah kecil, dan banyaknya kata yang sudah kamu tulis. Simpan, atau bagikan ke IG Story sebagai pengingat bahwa kamu sudah sejauh ini.</p>
+        </div>
+      </div>
+
+      <div class="bcard" id="bonus-majelis" style="--c:var(--plum);--t:#F3ECF6">
+        <div class="bvis"><img src="img/bonus-catatan-majelis.jpg" alt="Contoh halaman bonus Catatan Majelis" loading="lazy"></div>
+        <div class="bbody">
+          <span class="bpill">Catatan Majelis</span>
+          <h3>Paket siap cetak untuk kajian & rapat</h3>
+          <p>Lembar A4 siap cetak: template notulen rapat & musyawarah (agenda, keputusan, pembagian tugas), tracker kajian bulanan, dan halaman refleksi akhir bulan. Cetak sebanyak yang kamu butuhkan.</p>
+        </div>
+      </div>
+
+      <div class="bcard" style="--c:var(--sage);--t:#E4EFE8">
+        <div class="bvis"><span>🍃</span></div>
+        <div class="bbody">
+          <span class="bpill">Cukup</span>
+          <h3>Saku: 30 kartu penguat</h3>
+          <p>Kumpulan kalimat penyemangat dan wallpaper HP untuk menemani perjalanan keuanganmu. Pengingat kecil bahwa merasa cukup itu bisa dilatih, sedikit demi sedikit.</p>
+        </div>
+      </div>
+
+      <div class="bcard" style="--c:var(--terra);--t:#F6E3D8">
+        <div class="bvis"><span>🧾</span></div>
+        <div class="bbody">
+          <span class="bpill">Catat Usaha</span>
+          <h3>Template nota, kwitansi & hitung HPP</h3>
+          <p>Nota dan kwitansi siap cetak untuk usahamu, plus lembar hitung HPP sederhana: masukkan modal bahan dan biaya lain, lalu temukan harga jual yang pas dan tetap untung.</p>
+        </div>
+      </div>
+
+      <div class="bcard" style="--c:var(--ink);--t:#F6E3D8">
+        <div class="bvis"><span>🎁</span></div>
+        <div class="bbody">
+          <span class="bpill">Paket Bundling</span>
+          <h3>Semua bonus sekaligus</h3>
+          <p>Ambil paket 5 produk dan semua bonus di atas langsung jadi milikmu: checklist Ramadhan, sertifikat, paket siap cetak, Saku, serta template nota & HPP.</p>
+          <a class="blink" href="#paket">Lihat paketnya →</a>
+        </div>
+      </div>
+
+    </div>
+    <p class="swipe" style="display:block">Geser untuk melihat bonus lainnya →</p>
   </div>
 </section>
 
@@ -331,7 +412,7 @@ footer{padding:50px 0 40px;border-top:1px solid rgba(165,88,58,.12);margin-top:3
       <div style="position:relative;z-index:2">
         <h2>Paket Bundling<br>semua 5 produk</h2>
         <p>Ambil semuanya sekaligus. Satu kali beli, kelima aplikasi langsung terbuka untuk emailmu.</p>
-        <ul><li>Planner Muslimah 2027</li><li>Mulai Lagi</li><li>Catatan Majelis + bonus siap cetak</li><li>Cukup + bonus Saku</li><li>Catat Usaha</li><li>5 PDF + 5 aplikasi</li></ul>
+        <ul><li>Planner Muslimah 2027</li><li>Mulai Lagi</li><li>Catatan Majelis</li><li>Cukup</li><li>Catat Usaha</li><li>5 PDF + 5 aplikasi + semua bonus</li></ul>
         <div style="margin-top:22px"><div class="old">Normal Rp141.000</div><span class="new">Rp99.000</span><span class="save">Hemat Rp42rb</span></div>
         <a class="btn" href="https://lynk.id/littlesnoor/68wd1jgl36n3" target="_blank" rel="noopener">Ambil paketnya</a>
       </div>
@@ -358,24 +439,6 @@ footer{padding:50px 0 40px;border-top:1px solid rgba(165,88,58,.12);margin-top:3
       <div class="v" style="--c:var(--plum)"><video src="vid/catatan-majelis.mp4" poster="vid/catatan-majelis.jpg" controls playsinline preload="none"></video><div class="cap">Catatan Majelis<span>Pulang kajian · 0:48</span></div></div>
     </div>
     <p class="swipe">Geser untuk melihat video lainnya →</p>
-    <div class="cert" id="sertifikat">
-      <img src="img/sertifikat-mulai-lagi.jpg" alt="Contoh sertifikat Mulai Lagi" loading="lazy">
-      <div>
-        <span class="eyebrow">🏅 Bonus Mulai Lagi</span>
-        <h3>Selesai 30 hari, dapat sertifikat.</h3>
-        <p>Saat kamu menyelesaikan hari ke-30, aplikasi membuatkan sertifikat berisi namamu, jumlah langkah kecil, dan banyaknya kata yang sudah kamu tulis. Simpan, atau bagikan ke IG Story sebagai pengingat bahwa kamu sudah sejauh ini.</p>
-        <small>*Contoh tampilan. Isinya mengikuti perjalananmu sendiri.</small>
-      </div>
-    </div>
-    <div class="cert bonus-plum" id="bonus-majelis">
-      <img src="img/bonus-catatan-majelis.jpg" alt="Contoh halaman bonus Catatan Majelis siap cetak" loading="lazy">
-      <div>
-        <span class="eyebrow">🎁 Bonus Catatan Majelis</span>
-        <h3>Paket siap cetak untuk kajian & rapat.</h3>
-        <p>Selain PDF dan aplikasinya, kamu juga dapat lembar siap cetak ukuran A4: template notulen rapat & musyawarah (agenda, keputusan, pembagian tugas), tracker kajian bulanan, dan halaman refleksi akhir bulan. Cetak sebanyak yang kamu butuhkan.</p>
-        <small>*Dikirim bersama file PDF setelah pembelian.</small>
-      </div>
-    </div>
   </div>
 </section>
 
