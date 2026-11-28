@@ -185,6 +185,28 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,246,239,.92);backdro
 @media (max-width:860px){.steps{grid-template-columns:1fr 1fr}}
 @media (max-width:480px){.steps{grid-template-columns:1fr}}
 
+/* tutorial */
+.tut-os{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
+.os{background:#fff;border-radius:20px;padding:20px 22px;box-shadow:0 6px 18px rgba(20,50,60,.06)}
+.os h3{font-size:17px;margin-bottom:8px}
+.os ol{padding-left:20px;font-size:14.5px}.os li{margin:5px 0}
+.login{margin-top:14px;background:var(--t);border-radius:18px;padding:16px 20px;font-size:14.5px}
+.tl{margin-top:30px;display:grid;gap:14px}
+.tstep{background:#fff;border-radius:22px;padding:20px 22px;box-shadow:0 6px 18px rgba(20,50,60,.06);display:grid;grid-template-columns:52px 1fr;gap:14px}
+.tstep .ic{width:52px;height:52px;border-radius:16px;background:var(--tt,var(--t));display:grid;place-items:center;font-size:24px}
+.tstep small{display:block;font-size:12px;font-weight:600;color:var(--tc,var(--c));text-transform:uppercase;letter-spacing:.6px}
+.tstep h3{font-size:18px;margin:2px 0 6px}
+.tstep p{font-size:14.5px;color:var(--muted)}
+.tstep ul{list-style:none;margin-top:8px}
+.tstep li{position:relative;padding-left:22px;font-size:14.5px;margin:5px 0}
+.tstep li:before{content:"✓";position:absolute;left:0;color:var(--tc,var(--c));font-weight:700}
+.path{display:inline-block;margin-top:10px;background:var(--tt,var(--t));color:var(--tc,var(--c));font-weight:600;font-size:13px;padding:5px 12px;border-radius:999px}
+.tips{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.tips div{background:#fff;border-radius:18px;padding:16px;font-size:14px;box-shadow:0 4px 14px rgba(20,50,60,.05)}
+.tips b{display:block;font-size:15px;margin:4px 0 2px}
+.tips span{color:var(--muted)}
+@media (max-width:760px){.tut-os{grid-template-columns:1fr}.tips{grid-template-columns:1fr 1fr}}
+@media (max-width:420px){.tips{grid-template-columns:1fr}.tstep{grid-template-columns:44px 1fr}.tstep .ic{width:44px;height:44px;font-size:21px}}
 /* faq */
 .faq{max-width:760px;margin:30px auto 0}
 details{background:#fff;border-radius:18px;margin-bottom:12px;box-shadow:0 4px 14px rgba(20,50,60,.05)}
@@ -224,7 +246,7 @@ footer .slog{margin-top:8px;font-size:13px}
   <div class="wrap nav">
     <a class="brand" href="/"><img src="../img/mark.png" alt=""><span>littlesnoor</span></a>
     <div class="nav-right">
-      <a class="all" href="/#produk">Semua produk</a>
+      <a class="all" href="#tutorial">Tutorial</a><a class="all" href="/#produk">Semua produk</a>
       <a class="btn btn-primary buy" href="https://lynk.id/littlesnoor/2q0v7823ed4w" target="_blank" rel="noopener">Beli Rp29rb</a>
     </div>
   </div>
@@ -407,6 +429,75 @@ footer .slog{margin-top:8px;font-size:13px}
       <div class="step"><b>Unduh PDF-nya</b><span>Langsung tersedia di Member Area Lynk setelah pembayaran.</span></div>
       <div class="step"><b>Buka app.littlesnoor.com</b><span>Masuk dengan email yang sama seperti saat checkout.</span></div>
       <div class="step"><b>Pasang di layar utama</b><span>Planner-mu muncul di rak. Tinggal mulai menulis.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TUTORIAL -->
+<section id="tutorial" style="padding-top:20px">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Tutorial aplikasi</span>
+      <h2>Cara memakai aplikasi Planner</h2>
+      <p class="lead">Dari memasang di HP sampai menulis jurnal setiap hari.</p>
+    </div>
+
+    <div class="tut-os">
+      <div class="os"><h3>🤖 Pasang di Android</h3><ol>
+        <li>Buka <b>app.littlesnoor.com</b> di <b>Chrome</b></li>
+        <li>Ketuk titik tiga <b>⋮</b> di kanan atas</li>
+        <li>Pilih <b>Tambahkan ke layar utama</b> atau <b>Instal aplikasi</b></li>
+      </ol></div>
+      <div class="os"><h3>🍎 Pasang di iPhone</h3><ol>
+        <li>Buka <b>app.littlesnoor.com</b> di <b>Safari</b></li>
+        <li>Ketuk tombol <b>Bagikan</b> (kotak dengan panah ke atas)</li>
+        <li>Pilih <b>Tambah ke Layar Utama</b></li>
+      </ol></div>
+    </div>
+    <div class="login">🔑 <b>Masuk:</b> ketik email yang kamu pakai saat checkout di Lynk.id, lalu masukkan kode yang dikirim ke emailmu. Kode hanya diminta sekali di setiap perangkat. Setelah itu, ketuk <b>Planner Muslimah 2027</b> di rak.</div>
+
+    <div class="tl">
+      <div class="tstep" style="--tc:#B4566A;--tt:#FCE4E8"><div class="ic">🌙</div><div>
+        <small>Langkah 1 · Mulai dari sini</small><h3>Refleksi 2026</h3>
+        <p>Sebelum menyusun rencana, lihat dulu ke belakang: apa yang disyukuri tahun ini, apa yang ingin diperbaiki.</p>
+        <span class="path">Beranda → 🌙 Refleksi 2026</span></div></div>
+
+      <div class="tstep" style="--tc:#3B8456;--tt:#E2F2E7"><div class="ic">✨</div><div>
+        <small>Langkah 2</small><h3>Visi 2027</h3>
+        <p>Pilih satu kata untuk tahunmu dan tulis doa utamamu. Ini jadi pegangan setiap kali semangat turun.</p>
+        <span class="path">Beranda → ✨ Visi 2027</span></div></div>
+
+      <div class="tstep" style="--tc:#94731A;--tt:#FBF1D2"><div class="ic">🎯</div><div>
+        <small>Langkah 3</small><h3>Target & langkah kecil</h3>
+        <p>Tulis targetmu, lalu pecah jadi langkah-langkah kecil. Centang setiap langkah yang selesai, dan progresnya muncul di Beranda.</p>
+        <span class="path">Beranda → 🎯 Target</span></div></div>
+
+      <div class="tstep"><div class="ic">📖</div><div>
+        <small>Setiap hari · 5 menit</small><h3>Jurnal harian</h3>
+        <p>Ketuk <b>＋ Tulis jurnal hari ini</b> di Beranda, lalu isi 5 bagian:</p>
+        <ul><li>Perasaanku hari ini</li><li>3 hal yang aku syukuri</li><li>Prioritas hari ini</li><li>Ibadah hari ini (tinggal centang)</li><li>Refleksi malam: apa pelajaran hari ini?</li></ul>
+        <p style="margin-top:8px">Tidak harus diisi semua sekaligus. Mau melihat atau mengisi hari lain? Geser tanggal dengan tombol ‹ ›.</p>
+        <span class="path">Beranda → ＋ Tulis jurnal hari ini · atau menu Jurnal</span></div></div>
+
+      <div class="tstep" style="--tc:#2C7A90;--tt:#DDF0F5"><div class="ic">🗓️</div><div>
+        <small>Setiap bulan</small><h3>Kalender, habit & muhasabah</h3>
+        <ul><li><b>Kalender</b>: tanggal Masehi dan Hijriah berdampingan</li><li><b>Habit Tracker</b>: centang kebiasaan baikmu setiap hari</li><li><b>Muhasabah</b>: di akhir bulan, tulis apa yang disyukuri dan diperbaiki</li></ul>
+        <span class="path">Menu bawah → Bulanan</span></div></div>
+
+      <div class="tstep" style="--tc:#6A4FA0;--tt:#EEE8FA"><div class="ic">🌙</div><div>
+        <small>Menjelang Ramadhan</small><h3>Ramadhan 1448 H</h3>
+        <p>Siapkan Ramadhan dari jauh hari: target ibadah, tracker selama Ramadhan, dan 10 malam terakhir. Hitung mundurnya muncul di Beranda dan bisa kamu bagikan sebagai gambar.</p>
+        <span class="path">Beranda → 🌙 Ramadhan 1448 H</span></div></div>
+    </div>
+
+    <div class="center" style="margin-top:34px"><h3 style="font-size:20px;color:var(--c)">Fitur yang membantu</h3></div>
+    <div class="tips">
+      <div>⏰<b>Pengingat</b><span>Atur jam pengingat supaya rutin menulis. Menu Lainnya.</span></div>
+      <div>🎙️<b>Isi pakai suara</b><span>Ketuk ikon mikrofon di keyboard HP, lalu bicara.</span></div>
+      <div>💭<b>30 Pertanyaan</b><span>Ide tulisan saat bingung mau menulis apa.</span></div>
+      <div>📅<b>Hari Penting</b><span>Ramadhan, Idul Fitri, Idul Adha dan lainnya di 2027.</span></div>
+      <div>📝<b>Catatan</b><span>Halaman bebas untuk menulis apa saja.</span></div>
+      <div>🎨<b>Tampilan</b><span>Ganti warna tema dan latar aplikasi sesukamu, dari halaman rak.</span></div>
     </div>
   </div>
 </section>
