@@ -159,7 +159,9 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,246,239,.92);backdro
 @media (max-width:860px){.pdf{grid-template-columns:1fr}.pdf .cov{max-width:240px}}
 
 /* video */
-.vidwrap{max-width:340px;margin:34px auto 0;background:#fff;border-radius:26px;overflow:hidden;box-shadow:0 12px 30px rgba(20,50,60,.12)}
+.vids2{display:grid;grid-template-columns:repeat(2,minmax(0,320px));justify-content:center;gap:20px;margin-top:34px}
+@media (max-width:700px){.vids2{grid-template-columns:minmax(0,340px)}}
+.vidwrap{max-width:340px;margin:0 auto;background:#fff;border-radius:26px;overflow:hidden;box-shadow:0 12px 30px rgba(20,50,60,.12)}
 .vidwrap video{display:block;width:100%;aspect-ratio:9/16;background:#1f2a2d;object-fit:cover}
 .vidwrap .cap{padding:12px 16px;font-weight:600;color:var(--c);font-size:15px}
 .vidwrap .cap span{display:block;font-weight:400;color:var(--muted);font-size:13px}
@@ -207,6 +209,15 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,246,239,.92);backdro
 .tips span{color:var(--muted)}
 @media (max-width:760px){.tut-os{grid-template-columns:1fr}.tips{grid-template-columns:1fr 1fr}}
 @media (max-width:420px){.tips{grid-template-columns:1fr}.tstep{grid-template-columns:44px 1fr}.tstep .ic{width:44px;height:44px;font-size:21px}}
+/* testimoni */
+.testis{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:30px}
+.testi{background:#fff;border-radius:22px;padding:24px;box-shadow:0 6px 18px rgba(20,50,60,.06);position:relative}
+.testi:before{content:"“";position:absolute;top:-6px;left:18px;font-size:64px;color:var(--t);font-weight:700;line-height:1}
+.testi p{position:relative;font-size:15.5px}
+.testi .who{margin-top:14px;display:flex;align-items:center;gap:10px}
+.testi .av{width:40px;height:40px;border-radius:50%;background:var(--t);color:var(--c);font-weight:700;display:grid;place-items:center}
+.testi .who b{display:block;font-size:15px}.testi .who span{font-size:13px;color:var(--muted)}
+@media (max-width:760px){.testis{grid-template-columns:1fr}}
 /* faq */
 .faq{max-width:760px;margin:30px auto 0}
 details{background:#fff;border-radius:18px;margin-bottom:12px;box-shadow:0 4px 14px rgba(20,50,60,.05)}
@@ -374,11 +385,11 @@ footer .slog{margin-top:8px;font-size:13px}
 <!-- VIDEO -->
 <section id="video" style="padding-top:20px">
   <div class="wrap center">
-    <span class="eyebrow">Intip isinya</span>
-    <h2>Lihat langsung halamannya</h2>
-    <div class="vidwrap">
-      <video src="../vid/planner.mp4" poster="../vid/planner.jpg" controls playsinline preload="none"></video>
-      <div class="cap">Planner Muslimah 2027<span>Intip isi PDF · 0:35</span></div>
+    <span class="eyebrow">Video</span>
+    <h2>Lihat cara pakainya</h2>
+    <div class="vids2">
+      <div class="vidwrap"><video src="../vid/planner-app.mp4" poster="../vid/planner-app.jpg" controls playsinline preload="none"></video><div class="cap">Tutorial aplikasi<span>Cara memakai aplikasi Planner · 1:30</span></div></div>
+      <div class="vidwrap"><video src="../vid/planner.mp4" poster="../vid/planner.jpg" controls playsinline preload="none"></video><div class="cap">Isi PDF<span>Intip halaman PDF · 0:35</span></div></div>
     </div>
   </div>
 </section>
@@ -413,6 +424,22 @@ footer .slog{margin-top:8px;font-size:13px}
         <li>Ingin target tahun ini benar-benar jalan, bukan hanya ditulis</li>
         <li>Ingin menyambut Ramadhan 1448 H dengan lebih siap</li>
       </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONI -->
+<section id="testimoni" style="padding-top:20px">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Kata pengguna</span>
+      <h2>Cerita dari pengguna littlesnoor</h2>
+    </div>
+    <div class="testis">
+      <div class="testi"><p>Saya selalu mencatat sebelum tidur. Aplikasi littlesnoor sangat membantu. Ada reminder juga, dan setiap tabel isian bisa rekam suara, jadi sambil baring nggak perlu ngetik lagi, cukup ngomong aja dan otomatis jadi teks. Jadinya seperti curhat sama seseorang, padahal sama littlesnoor 😁 Thanks littlesnoor sudah bikin malamku selalu lega ✨</p>
+        <div class="who"><span class="av">H</span><div><b>Hanan</b><span>Pengguna aplikasi littlesnoor</span></div></div></div>
+      <div class="testi"><p>Selama ini aku suka nyatat materi kajian atau rapat di WhatsApp aja. Buat grup bareng temen, terus catat materi di grup itu. Sekarang materinya dicatat di Catatan Majelis, jadi lebih menyenangkan dan memudahkan. Semoga bernilai pahala untuk yang buat aplikasi 🥰</p>
+        <div class="who"><span class="av">A</span><div><b>Afifah</b><span>Pengguna Catatan Majelis</span></div></div></div>
     </div>
   </div>
 </section>
